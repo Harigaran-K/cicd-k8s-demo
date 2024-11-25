@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Compile') {
       steps {
-        git 'https://github.com/Harigaran-K/cicd-k8s-demo.git'
+        git 'https://github.com/Harigaran-K/cicd-k8s-demo'
         script{
                 def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
                 sh "${mvnHome}/bin/mvn package"
